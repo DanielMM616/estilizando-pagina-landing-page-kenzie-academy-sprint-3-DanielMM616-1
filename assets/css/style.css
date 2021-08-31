@@ -29,17 +29,33 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --branco: #FFFFFF;
+    --azul-claro: #007aff;
+    --azul-escuro: #00043e;
+    --cinza: #303030;
+    --cinza-claro:#818181;
+    --claro-light: rgb(241, 241, 241);
+    --font-montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
+    --font-lato: 'Lato', Helvetica, Arial, sans-serif;
+}
   
 /* GERAL */
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+/* RESET */
+/* Aqui são os requisitos padrão descritos na atividade mais os que já vieram estilizados por padrão*/
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: var(--font-lato);
     list-style: none;
+    text-decoration: none;
+}
+h2{
+    font-family: var(--font-montserrat);
 }
 img{
+    width: 100%;
     max-width: 800px;
 }
 div.flex{
@@ -54,12 +70,58 @@ div.large-container{
     width: 100%;
     max-width: 1170px;
     margin:0 auto;
+    font-size: 13px;
 }
+
 div.container{
     width: 100%;
     max-width: 1140px;
     margin:0 auto;
 }
+.secaoDestaque h2{
+    font-size: 63px;
+}
+.secaoDestaque p{
+    font-size: 21px;
+}
+.secaoDestaque[type="button"]{
+    font-size: 14px;
+}
+.secaoSobre h2{
+    font-size: 24px;
+}
+.secaoSobre p{
+    font-size: 19px;
+}
+.secaoCursos h2{
+    font-size: 24px;
+}
+.secaoCursos h3{
+    font-size: 19px;
+}
+.secaoCursos p{
+    font-size: 15px;
+}
+.secaoCalendar .calendario-data{
+    font-size: 36px;
+}
+.secaoCalendar h3{
+    font-size: 19px;
+}
+.secaoCalendar p{
+    font-size: 15px;
+}
+.secaoCalendar button{
+    font-size: 32px;
+}
+
+.secaoContato p, ul, form {
+    font-size: 15px;
+}
+
+
+/* Apartir daqui são as nossas personalizações para conclusão do exercicio */
+
 /* GERAL */
   
 /* HTML */
@@ -67,15 +129,355 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    
+}
 /* BODY */
   
-/* HEADER */
-header{}
-/* HEADER */
-  
+/* CABEÇALHO, AREA DE DESTAQUE E FORMULARIO*/
+.topo, .secaoDestaque{
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+.topo a{
+    color: var(--branco);
+}
+.topo img{
+    width: 75px;
+    
+}
+div.large-container{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /*!!!VERIFICAR!!!*/
+}
+div.large-container nav{
+    display: none;
+}
+div.large-container .sanduba input{
+    display: none;
+}
+.sanduba label{
+    font-size: 24px;
+}
+
+
+div.large-container figcaption{
+    display: none;
+}
+.secaoDestaque{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    padding-bottom: 100px;
+    align-items: center;
+}
+.secaoDestaque h2{
+    font-family: var(--font-montserrat);
+    font-size: 35px;
+    font-weight: 400;
+    max-width: 300px;
+    
+}
+.secaoDestaqueFormulario{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.secaoDestaqueFormulario input{
+    padding: 0px 20px;
+    border-style: none;
+    border-radius: 4px 0px 0px 4px;
+    width: 180px;
+    height: 35px;
+    font-family: var(--font-montserrat);
+    font-size: 15px;
+}
+
+.secaoDestaqueFormulario button{
+    background-color: var(--azul-claro);
+    border-style: none;
+    border-radius: 0px 4px 4px 0px;
+    color: var(--branco);
+    height: 35px;
+    /* width: 100px; */
+    cursor: pointer;
+    padding: 6px 12px;
+    font-family: var(--font-montserrat);
+    font-size: 17px;
+    font-weight: 400;
+}
+.secaoDestaqueFormulario button:hover{
+    background-color: var(--azul-escuro);
+    border: 1px solid var(--branco);
+    color: var(--azul-claro);
+}
+/* SEÇÃO SOBRE */
+.secaoSobre .flex div:nth-child(1){
+    color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 70px;
+}
+.secaoSobre .flex div:nth-child(1) h2{
+    font-family: var(--font-lato);
+    padding-bottom: 65px;
+    width: 228px;
+}
+.secaoSobre .flex div:nth-child(1) p{
+    padding-bottom: 65px;
+    width: 228px;
+}
+.secaoSobre .flex div:nth-child(1) span{
+    padding-bottom: 40px;
+    width: 228px;
+    color: var(--cinza-claro);
+}
+.secaoSobre .flex div:nth-child(1) button{
+    width: 228px;
+    font-family: var(--font-lato);
+    color: var(--cinza);
+    border-radius: 6px;
+    border:1px solid var(--claro-light);
+    font-size: 19px;
+    padding: 10px ;
+    background-color: transparent;
+}
+.secaoSobre .flex div:nth-child(1) button:hover{
+    background-color: var(--cinza-claro);
+    color: var(--branco);
+}
+.secaoSobre .flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secaoSobre .flex figcaption{
+    display: none;
+}
+.secaoSobre .flex img[alt="python"]{
+    width: 300px;
+    padding-bottom: 65px;
+}
+.secaoSobre .flex img{
+    width: 130px;
+}
+.secaoSobre .flex div{
+    width: 100%;
+    text-align: center;
+}
+.secaoSobre .flex div:nth-child(3),.secaoSobre .flex div:nth-child(4){
+    background-color: rgb(241, 241, 241);
+}
+.secaoSobre .flex div:nth-child(3){
+    padding-top: 65px;
+    padding-bottom: 20px;
+}
+.secaoSobre .flex div:nth-child(4) h2{
+    padding: 0 100px 65px 100px;
+    color: var(--cinza);
+}
+.secaoSobre .flex div:nth-child(4) ul{
+    padding: 0 105px 65px 105px;
+    color: var(--cinza-claro);
+    list-style: disc;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* CURSOS */
+.secaoCursos article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secaoCursos li{
+    text-align: center;
+    color: var(--cinza);
+}
+.secaoCursos h2{
+    padding: 65px;
+    padding-bottom: 25px;
+    font-family: var(--font-lato);
+    color: var(--cinza);
+}
+.secaoCursos article p:nth-child(2){
+    padding-bottom: 65px;
+    font-size: 24px;
+}
+.secaoCursos li img{
+    padding-bottom: 15px;
+}
+.secaoCursos li h3{
+    padding-bottom: 40px;
+}
+.secaoCursos li p{
+    line-height: 30px;
+    color: var(--cinza-claro);
+    padding-bottom: 30px;
+}
+.secaoCursos img{
+    width: 110px;
+}
+
+/* CALENDARIO */
+.secaoCalendar{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.secaoCalendar h2{
+    color: var(--cinza);
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.secaoCalendar p:nth-child(2){
+    font-size: 24px;
+}
+.secaoCalendar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secaoCalendar ul li{
+    width: 228px;
+    border: 2px solid var(--azul-escuro);
+    margin-top: 60px;
+}
+.secaoCalendar ul li .calendario-data{
+    background-color: var(--azul-escuro);
+    padding: 30px;
+    color: var(--branco);
+    display: block;
+}
+.secaoCalendar ul li h3{
+    color: var(--cinza);
+    padding: 30px;
+}
+.secaoCalendar ul li p{
+    line-height: 25px;
+    padding: 0 15px 30px;
+    color: var(--cinza-claro);
+}
+.secaoCalendar .calendario-data-rodape{
+    padding-bottom: 30px;
+}
+.secaoCalendar .calendario-data-rodape span{
+    color: var(--cinza-claro);
+    display: block;
+    padding: 30px 0;
+    font-size: 36px;
+    border-top: 1px solid rgb(195, 196, 197);
+
+}
+.secaoCalendar .calendario-data-rodape button{
+    background-color: var(--azul-claro);
+    border-radius: 8px;
+    border-style: none;
+    color: var(--branco);
+    padding: 15px 60px;
+    font-size: 20px;
+}
+.secaoCalendar .calendario-data-rodape button:hover{
+    background-color: var(--branco);
+    color: var(--azul-claro);
+    border: 1px solid var(--azul-claro);
+}
+/* CONTATO */
+.secaoContato .flex{
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--claro-light);
+}
+.hide{
+    display: none;
+}
+
+.secaoContato .flex .secaoContato-informacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secaoContato .flex .secaoContato-informacoes p{
+    /* background-color: limegreen; */
+    /* order: 2; */
+    color: var(--cinza-claro); 
+    line-height: 25px;
+    text-align: left;
+    width: 228px;   
+}
+.secaoContato .flex .secaoContato-informacoes ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 228px;
+    margin-bottom: 30px;
+}
+.secaoContato .flex .secaoContato-informacoes ul li{
+    padding-top: 15px;
+}
+.secaoContato .flex .secaoContato-informacoes ul li img{
+    width: 15px;
+    padding-right: 3px;
+}
+.secaoContato .flex .secaoContato-informacoes a{
+    color: var(--cinza-claro);
+}
+.secaoContato .flex .flex-col h2{
+    padding-top: 50px;
+    padding-bottom: 35px;
+    color: var(--cinza);
+    text-transform: uppercase;
+}
+.secaoContato .flex form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 229px;
+    margin: 0 auto 50px;
+}
+
+.secaoContato .flex form label{
+    display: none;
+}
+.secaoContato .flex form input{
+    width: 228px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+}
+.secaoContato .flex form textarea{
+    width: 228px;
+    height: 114px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.secaoContato .flex form input[type="submit"]{
+    width: auto;
+    padding: 10px 15px;
+    font-size: 15px;
+    background-color: var(--branco);
+    margin-right: 0;
+    margin-left: auto;
+
+}
+.secaoContato .flex form input[type="submit"]:hover{
+    background-color: var(--cinza-claro);
+    color: var(--branco);
+}
 /* FOOTER */
-footer{}
+footer{
+    background-color: var(--claro-light);
+}
 /* FOOTER */
 
 /* INICIAL */
@@ -97,7 +499,130 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (min-width: 400px) {
+       
+       
+      
+        
+        .secaoDestaque{
+            height: 300px;
+        }
+        .secaoDestaque h2{
+            width: 80vw;
+            max-width: 600px;
+        }
+
+        .secaoDestaqueFormulario input{
+
+            width: 45vw;
+            max-width: 360px;
+
+        }
+        
+
+        /* SEÇÃO SOBRE */
+
+        .secaoSobre .flex div:nth-child(1) h2{
+
+            width: 65vw;
+        }
+        .secaoSobre .flex div:nth-child(1) p{
+
+            width: 65vw;
+        }
+        .secaoSobre .flex div:nth-child(1) span{
+            width: 65vw;
+        }
+        .secaoSobre .flex div:nth-child(1) button{
+            width: 65vw;
+            max-width: 228px;
+        }
+        
+        /* CURSOS */
+
+        .secaoCursos ul{
+            column-count: 2;
+        }
+        .secaoCursos li{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .secaoCursos img{
+            height: 125px;
+            object-fit: contain;
+        }
+        
+        /* CALENDARIO */
+
+
+        .secaoCalendar ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .secaoCalendar ul li{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        /* CONTATO */
+
+
+        .secaoContato .flex .secaoContato-informacoes p{
+
+            width: 65vw;   
+        }
+        .secaoContato .flex .secaoContato-informacoes ul{
+            
+            width: 65vw;
+        }
+        .secaoContato .flex .secaoContato-informacoes ul li{
+            padding-top: 15px;
+        }
+        .secaoContato .flex .secaoContato-informacoes ul li img{
+            width: 15px;
+            padding-right: 3px;
+        }
+
+        .secaoContato .flex form{
+            width: 65vw;
+        }
+        .secaoContato .form-input-model{
+            width: 65vw;
+        }
+        
+
+        .secaoContato .flex form input{
+            width: 65vw;
+        }
+        .secaoContato .flex form textarea{
+            width: 65vw;
+        }
+        .secaoContato .flex form input[type="submit"]{
+            width: 20vw;
+        
+        }
+
+    }
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 800px) {
+        /*Necessario para alterar a ordem do titulo CONTACT no mobile
+        Essas propriedades escondem o do mobile e volta ao padrão*/
+        .hide{
+            display: block;
+        }
+        .hide2{
+            display: none;
+        }
+        div.large-container nav{
+            display: block;
+        }
+        .sanduba label{
+            display: none;
+        }
+        
+    }
 /* MEDIA QUERIES */

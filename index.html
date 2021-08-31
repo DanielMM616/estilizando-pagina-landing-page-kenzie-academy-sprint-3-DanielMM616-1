@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="icon-96x96.webp">
   <link rel="stylesheet" href="assets/css/style.css">
+  
   <title>Landing Page Kenzie Academy</title>
 </head>
 <body>
   
   <!-- CABEÇALHO -->
-  <header class="topo">
+  <header class="topo"> 
 
     <div class="large-container">
       <!-- LOGO -->
@@ -21,7 +22,12 @@
       </figure>
 
       <!-- MENU DE NAVEGAÇÃO -->
-      <nav>
+      <div class="sanduba">
+        <input type="checkbox" name="sanduba" id="" class="bt-sanduba">
+        <label for="sanduba">&#9776;</label>
+      </div>
+      
+      <nav class="menu">
         <ul>
           <li><a href="#1">Sobre a Kenzie</a></li>
           <li><a href="#2">Agenda</a></li>
@@ -85,7 +91,7 @@
               <figcaption>Java Script</figcaption>  
             </figure>      
   
-          </div>
+        </div>
 
         <!-- COLUNA DIREITA -->
         <div class="flex-col">
@@ -159,7 +165,7 @@
       </article>
 
     </section>
-
+    
     <section class="secaoCalendar">
 
       <h2>SCHEDULE</h2>
@@ -209,14 +215,16 @@
         <!-- COLUNA LADO ESQUERDO -->
         <div class="flex-col">
           
+          <h2 class="hide2">Contact</h2>
+
           <div class="secaoContato-informacoes">
           
             <p>Contact us and we'll get back to you within 24 hours.</p>
             
             <ul>
-              <li><a href="#">Chicago, US</a> </li>
-              <li><a href="tel:001515151515">+00 1515151515</a></li>
-              <li><a href="malito:myemail@something.com">myemail@something.com</a></li>
+              <li><img src="/assets/img/003-maps-and-flags.png" alt=""><a href="#">Chicago, US</a> </li>
+              <li><img src="/assets/img/002-smartphone.png" alt=""><a href="tel:001515151515">+00 1515151515</a></li>
+              <li><img src="/assets/img/001-email.png" alt=""><a href="malito:myemail@something.com">myemail@something.com</a></li>
             </ul>
 
           </div>
@@ -226,7 +234,7 @@
         <!-- COLUNA LADO DIRETO -->
         <div class="flex-col">
           
-          <h2>Contact</h2>
+          <h2 class="hide">Contact</h2>
           
           <form action="">
 
@@ -242,7 +250,7 @@
 
             <div class="form-input-model">
               <label for="mensagem">E-mail</label>
-              <textarea name="mensagem" id="mensagem"></textarea>
+              <textarea name="mensagem" id="mensagem" placeholder="Comment"></textarea>
             </div>
 
             <input type="submit" value="Send">
